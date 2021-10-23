@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "66037797746",
+    "project_id": "nfilm-18b5f",
+    "storage_bucket": "nfilm-18b5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66037797746:android:0c153c15237a385cd903eb",
+        "android_client_info": {
+          "package_name": "com.noname.nf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66037797746-jpge30f2hqccoqfcq18f9u5nib6gp95b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDruOkCyH-lrtIZcKOBn2y1WkDLoaeI2OE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66037797746-jpge30f2hqccoqfcq18f9u5nib6gp95b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

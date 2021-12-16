@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NF">
         <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
             android:name=".MainPage"
             android:exported="false" />
         <activity

@@ -5,9 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?attr/colorOnPrimary"
+    android:background="@color/lightBlue"
     tools:context=".SplashScreen">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_splash_background_style">
 
+
+
+    </FrameLayout>
 
 </LinearLayout>

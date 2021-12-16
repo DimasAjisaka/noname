@@ -6,5 +6,7 @@
     <string name="todo">TODO</string>
     <string name="next">Lanjutkan</string>
     <string name="lorem_ipsum">Lorem Ipsum</string>
-    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="ipsum_lorem">Ipsum Lorem</string>
+    <string name="onBoarding_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="onBoarding_2">Lorem dolor ipsum amet sit, consectetur adipiscing elit.</string>
 </resources>

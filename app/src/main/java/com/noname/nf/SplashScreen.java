@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
 //    FirebaseAuth auth;
 
 
-    private static int SPLASH_SCREEN = 1000;
+    private static int SPLASH_SCREEN = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

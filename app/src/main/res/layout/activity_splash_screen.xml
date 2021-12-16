@@ -13,7 +13,18 @@
         android:layout_height="match_parent"
         android:background="@drawable/ic_splash_background_style">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_splash_logo"
+                android:contentDescription="@string/todo" />
+
+        </RelativeLayout>
 
     </FrameLayout>
 

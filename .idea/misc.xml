@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/button_shape.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/field_shape.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/ic_background_style.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/ic_fragment_1.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/ic_splash_background_style.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_login.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_main_page.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_splash_screen.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/slider_layout.xml" value="0.3385416666666667" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/drawable/input_field_bg.xml" value="0.37864583333333335" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/drawable/login_button.xml" value="0.37864583333333335" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/layout/activity_login.xml" value="0.3625" />

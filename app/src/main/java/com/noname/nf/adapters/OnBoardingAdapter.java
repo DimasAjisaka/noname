@@ -50,6 +50,10 @@ public class OnBoardingAdapter extends PagerAdapter {
         titles.setText(title[position]);
         texts.setText(text[position]);
 
+        if (position == 1){
+            imageView.setTranslationX(30);
+        }
+
         container.addView(view);
 
         return view;

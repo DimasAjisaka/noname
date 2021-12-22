@@ -25,16 +25,16 @@
             android:id="@+id/relative_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="30dp"
-            android:paddingTop="20dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="30dp"
             android:layout_gravity="bottom">
 
             <Button
                 android:id="@+id/next"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/button_shape"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:onClick="next"
@@ -42,7 +42,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
         </RelativeLayout>
 

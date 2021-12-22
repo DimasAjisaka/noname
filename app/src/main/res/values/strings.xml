@@ -9,4 +9,8 @@
     <string name="ipsum_lorem">Ipsum Lorem</string>
     <string name="onBoarding_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="onBoarding_2">Lorem dolor ipsum amet sit, consectetur adipiscing elit.</string>
+    <string name="genre">Genre apa yang kamu sukai?</string>
+    <string name="ex">contoh: Action</string>
+    <string name="note">Note</string>
+    <string name="prev">Kembali</string>
 </resources>

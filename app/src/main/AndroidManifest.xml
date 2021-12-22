@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NF">
         <activity
+            android:name=".Questions"
+            android:exported="false" />
+        <activity
             android:name=".OnBoardingScreen"
             android:exported="false" />
         <activity

@@ -8,4 +8,6 @@
     <color name="lightGrey">#EFF3F6</color>
     <color name="darkenBlue">#283457</color>
     <color name="darkBlue">#5E85A0</color>
+    <color name="lessBlue">#EBF6FF</color>
+    <color name="blueTransparent">#D6EEFE</color>
 </resources>

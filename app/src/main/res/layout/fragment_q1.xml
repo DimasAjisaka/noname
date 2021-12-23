@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentQ1">
+        
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="295dp"
+        android:padding="20dp"
+        android:background="@drawable/white_shape"
+        android:elevation="0.5dp">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_1"
+            android:textColor="@color/darkenBlue"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/c1"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/genreCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/genre_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/countryCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:button="@drawable/country_custom_radio_button"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/white_shape">
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+<!--<RelativeLayout-->
+<!--android:id="@+id/btnGroupLayout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:gravity="center"-->
+<!--android:layout_below="@+id/c1">-->
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/one"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/two"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/three"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/four"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/five"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/six"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/seven"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/eight"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--        <RadioButton-->
+<!--            android:id="@+id/nine"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:button="@drawable/custom_radio_button"/>-->
+<!--    -->
+<!--    </RadioGroup>-->
+
+<!--</RelativeLayout>-->

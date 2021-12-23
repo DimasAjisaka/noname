@@ -13,4 +13,8 @@
     <string name="ex">contoh: Action</string>
     <string name="note">Note</string>
     <string name="prev">Kembali</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="genre_text">Kamu lebih suka Genre</string>
+    <string name="question_1">Kamu lebih suka genre atau country?</string>
 </resources>

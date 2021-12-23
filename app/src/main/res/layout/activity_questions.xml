@@ -35,21 +35,16 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/note"
                 android:fontFamily="@font/poppins_regular"
-                android:text="1:    Sama suka\n2:   Anara sama suadanagk suka\n3:   Agak suka\n4:   Antara agak suka dan suka\n5:   Suka\n6:   Antara suka dan suka banget\n7:   Suka banget\n8:   Antara suka banget dan sangat suka\n      banget\n9:   Suka banget"
+                android:text="1:    Sama suka\n2:   Anara sama suka dan agak suka\n3:   Agak suka\n4:   Antara agak suka dan suka\n5:   Suka\n6:   Antara suka dan suka banget\n7:   Suka banget\n8:   Antara suka banget dan sangat suka\n      banget\n9:   Sanget suka banget"
                 android:textColor="@color/darkBlue"
-                android:textSize="15sp" />
+                android:textSize="15sp"/>
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/fragments"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginTop="335dp">
-
-
-
-        </RelativeLayout>
+            android:layout_height="match_parent"/>
 
         <RelativeLayout
             android:id="@+id/relative_layout"
@@ -73,7 +68,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/pervQ"
+                android:id="@+id/prevQ"
                 android:layout_width="167dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
@@ -85,7 +80,8 @@
                 android:text="@string/prev"
                 android:textAllCaps="false"
                 android:textColor="@color/lightBlue"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:visibility="invisible"/>
 
         </RelativeLayout>
 

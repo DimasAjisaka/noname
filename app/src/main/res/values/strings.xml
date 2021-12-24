@@ -17,4 +17,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="genre_text">Kamu lebih suka Genre</string>
     <string name="question_1">Kamu lebih suka genre atau country?</string>
+    <string name="question_2">Kamu lebih suka genre atau age?</string>
+    <string name="giving_integrity">Kasih bobot</string>
 </resources>

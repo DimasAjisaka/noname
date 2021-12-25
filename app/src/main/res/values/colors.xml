@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="lightMainBg">#FFF</color>
+    <color name="white">#FFF</color>
     <color name="light_semi_boldText">#4F565E</color>
     <color name="light_medText">#6B7075</color>
     <color name="light_regularText">#888F96</color>
-    <color name="splash">#C53A5C</color>
-    <color name="actionButton">#B17A7A</color>
-    <color name="pinkPrimary">#EC7474</color>
-    <color name="field">#EAEAEA</color>
+    <color name="lightBlue">#32A8FC</color>
+    <color name="lightGrey">#EFF3F6</color>
+    <color name="darkenBlue">#283457</color>
+    <color name="darkBlue">#5E85A0</color>
+    <color name="lessBlue">#EBF6FF</color>
+    <color name="blueTransparent">#D6EEFE</color>
 </resources>

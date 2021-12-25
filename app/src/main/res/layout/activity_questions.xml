@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Questions">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background_style">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/less_color_shape"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/note"
+                android:textColor="@color/darkenBlue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/note"
+                android:fontFamily="@font/poppins_regular"
+                android:text="1:    Sama suka\n2:   Anara sama suka dan agak suka\n3:   Agak suka\n4:   Antara agak suka dan suka\n5:   Suka\n6:   Antara suka dan suka banget\n7:   Suka banget\n8:   Antara suka banget dan sangat suka\n      banget\n9:   Sanget suka banget"
+                android:textColor="@color/darkBlue"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fragments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/nextQ"
+                android:layout_width="167dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_shape"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/prevQ"
+                android:layout_width="167dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/less_color_shape"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/prev"
+                android:textAllCaps="false"
+                android:textColor="@color/lightBlue"
+                android:textSize="16sp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentQ2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="295dp"
+        android:padding="20dp"
+        android:background="@drawable/white_shape"
+        android:elevation="0.5dp">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/question_2"
+            android:textColor="@color/darkenBlue"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/c2"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/criteriaCompare2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/genreCheckQ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/genre_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/countryCheckQ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:button="@drawable/country_custom_radio_button"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/integrityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        android:elevation="0.5dp"
+        android:visibility="invisible"
+        android:background="@drawable/white_shape">
+
+        <TextView
+            android:id="@+id/integrity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/giving_integrity"
+            android:textColor="@color/darkenBlue"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/btnGroupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/integrity"
+            android:gravity="center">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/oneQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/one_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/twoQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/two_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/threeQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/three_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/fourQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/four_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/fiveQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/five_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/sixQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/six_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/sevenQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/seven_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/eightQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/eight_integrity_custom_radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/nineQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:button="@drawable/nine_integrity_custom_radio_button"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

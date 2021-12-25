@@ -15,10 +15,10 @@ import com.noname.nf.R;
 
 ///**
 // * A simple {@link Fragment} subclass.
-// * Use the {@link FragmentQ1#newInstance} factory method to
+// * Use the {@link FragmentQ7#newInstance} factory method to
 // * create an instance of this fragment.
 // */
-public class FragmentQ1 extends Fragment {
+public class FragmentQ7 extends Fragment {
 
     RadioGroup radioGroupCriteriaCompare1,integrityRadio;
     RadioButton radioButtonGenre,radioButtonCountry,inte1,inte2,inte3,inte4,inte5,inte6,inte7,inte8,inte9;
@@ -34,29 +34,29 @@ public class FragmentQ1 extends Fragment {
 //    // TODO: Rename and change types of parameters
 //    private String mParam1;
 //    private String mParam2;
-
-    public FragmentQ1() {
-        // Required empty public constructor
-    }
-
+//
+//    public FragmentQ7() {
+//        // Required empty public constructor
+//    }
+//
 //    /**
 //     * Use this factory method to create a new instance of
 //     * this fragment using the provided parameters.
 //     *
 //     * @param param1 Parameter 1.
 //     * @param param2 Parameter 2.
-//     * @return A new instance of fragment FragmentQ1.
+//     * @return A new instance of fragment FragmentQ7.
 //     */
 //    // TODO: Rename and change types and number of parameters
-//    public static FragmentQ1 newInstance(String param1, String param2) {
-//        FragmentQ1 fragment = new FragmentQ1();
+//    public static FragmentQ7 newInstance(String param1, String param2) {
+//        FragmentQ7 fragment = new FragmentQ7();
 //        Bundle args = new Bundle();
 //        args.putString(ARG_PARAM1, param1);
 //        args.putString(ARG_PARAM2, param2);
 //        fragment.setArguments(args);
 //        return fragment;
 //    }
-
+//
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -70,32 +70,32 @@ public class FragmentQ1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_q1, container, false);
+        View view = inflater.inflate(R.layout.fragment_q7, container, false);
 
-        radioGroupCriteriaCompare1 = view.findViewById(R.id.criteriaCompare1);
-        radioButtonGenre = view.findViewById(R.id.genreCheckQ1);
-        radioButtonCountry = view.findViewById(R.id.countryCheckQ1);
-        integrityLayout = view.findViewById(R.id.integrityLayoutQ1);
-        integrityRadio = view.findViewById(R.id.integrityQ1);
-        inte1 = view.findViewById(R.id.oneQ1);
-        inte2 = view.findViewById(R.id.twoQ1);
-        inte3 = view.findViewById(R.id.threeQ1);
-        inte4 = view.findViewById(R.id.fourQ1);
-        inte5 = view.findViewById(R.id.fiveQ1);
-        inte6 = view.findViewById(R.id.sixQ1);
-        inte7 = view.findViewById(R.id.sevenQ1);
-        inte8 = view.findViewById(R.id.eightQ1);
-        inte9 = view.findViewById(R.id.nineQ1);
+        radioGroupCriteriaCompare1 = view.findViewById(R.id.criteriaCompare7);
+        radioButtonGenre = view.findViewById(R.id.genreCheckQ7);
+        radioButtonCountry = view.findViewById(R.id.countryCheckQ7);
+        integrityLayout = view.findViewById(R.id.integrityLayoutQ7);
+        integrityRadio = view.findViewById(R.id.integrityQ7);
+        inte1 = view.findViewById(R.id.oneQ7);
+        inte2 = view.findViewById(R.id.twoQ7);
+        inte3 = view.findViewById(R.id.threeQ7);
+        inte4 = view.findViewById(R.id.fourQ7);
+        inte5 = view.findViewById(R.id.fiveQ7);
+        inte6 = view.findViewById(R.id.sixQ7);
+        inte7 = view.findViewById(R.id.sevenQ7);
+        inte8 = view.findViewById(R.id.eightQ7);
+        inte9 = view.findViewById(R.id.nineQ7);
 
         radioGroupCriteriaCompare1.setOnCheckedChangeListener((group, checkedId) -> {
             if (radioButtonGenre.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "genre";
+                criteriaSelected = "country";
             }
 
             if (radioButtonCountry.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "country";
+                criteriaSelected = "age";
             }
         });
 

@@ -15,10 +15,10 @@ import com.noname.nf.R;
 
 ///**
 // * A simple {@link Fragment} subclass.
-// * Use the {@link FragmentQ1#newInstance} factory method to
+// * Use the {@link FragmentQ3#newInstance} factory method to
 // * create an instance of this fragment.
 // */
-public class FragmentQ1 extends Fragment {
+public class FragmentQ3 extends Fragment {
 
     RadioGroup radioGroupCriteriaCompare1,integrityRadio;
     RadioButton radioButtonGenre,radioButtonCountry,inte1,inte2,inte3,inte4,inte5,inte6,inte7,inte8,inte9;
@@ -35,7 +35,7 @@ public class FragmentQ1 extends Fragment {
 //    private String mParam1;
 //    private String mParam2;
 
-    public FragmentQ1() {
+    public FragmentQ3() {
         // Required empty public constructor
     }
 
@@ -45,11 +45,11 @@ public class FragmentQ1 extends Fragment {
 //     *
 //     * @param param1 Parameter 1.
 //     * @param param2 Parameter 2.
-//     * @return A new instance of fragment FragmentQ1.
+//     * @return A new instance of fragment FragmentQ3.
 //     */
 //    // TODO: Rename and change types and number of parameters
-//    public static FragmentQ1 newInstance(String param1, String param2) {
-//        FragmentQ1 fragment = new FragmentQ1();
+//    public static FragmentQ3 newInstance(String param1, String param2) {
+//        FragmentQ3 fragment = new FragmentQ3();
 //        Bundle args = new Bundle();
 //        args.putString(ARG_PARAM1, param1);
 //        args.putString(ARG_PARAM2, param2);
@@ -70,22 +70,22 @@ public class FragmentQ1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_q1, container, false);
+        View view = inflater.inflate(R.layout.fragment_q3, container, false);
 
-        radioGroupCriteriaCompare1 = view.findViewById(R.id.criteriaCompare1);
-        radioButtonGenre = view.findViewById(R.id.genreCheckQ1);
-        radioButtonCountry = view.findViewById(R.id.countryCheckQ1);
-        integrityLayout = view.findViewById(R.id.integrityLayoutQ1);
-        integrityRadio = view.findViewById(R.id.integrityQ1);
-        inte1 = view.findViewById(R.id.oneQ1);
-        inte2 = view.findViewById(R.id.twoQ1);
-        inte3 = view.findViewById(R.id.threeQ1);
-        inte4 = view.findViewById(R.id.fourQ1);
-        inte5 = view.findViewById(R.id.fiveQ1);
-        inte6 = view.findViewById(R.id.sixQ1);
-        inte7 = view.findViewById(R.id.sevenQ1);
-        inte8 = view.findViewById(R.id.eightQ1);
-        inte9 = view.findViewById(R.id.nineQ1);
+        radioGroupCriteriaCompare1 = view.findViewById(R.id.criteriaCompare3);
+        radioButtonGenre = view.findViewById(R.id.genreCheckQ3);
+        radioButtonCountry = view.findViewById(R.id.countryCheckQ3);
+        integrityLayout = view.findViewById(R.id.integrityLayoutQ3);
+        integrityRadio = view.findViewById(R.id.integrityQ3);
+        inte1 = view.findViewById(R.id.oneQ3);
+        inte2 = view.findViewById(R.id.twoQ3);
+        inte3 = view.findViewById(R.id.threeQ3);
+        inte4 = view.findViewById(R.id.fourQ3);
+        inte5 = view.findViewById(R.id.fiveQ3);
+        inte6 = view.findViewById(R.id.sixQ3);
+        inte7 = view.findViewById(R.id.sevenQ3);
+        inte8 = view.findViewById(R.id.eightQ3);
+        inte9 = view.findViewById(R.id.nineQ3);
 
         radioGroupCriteriaCompare1.setOnCheckedChangeListener((group, checkedId) -> {
             if (radioButtonGenre.isChecked()) {
@@ -95,7 +95,7 @@ public class FragmentQ1 extends Fragment {
 
             if (radioButtonCountry.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "country";
+                criteriaSelected = "age";
             }
         });
 

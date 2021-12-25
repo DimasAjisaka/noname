@@ -12,8 +12,8 @@
             android:id="@+id/slider_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="74dp"
             android:layout_marginStart="85dp"
+            android:layout_marginTop="70dp"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_onboarding_1" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="42dp">
+        android:layout_marginTop="35dp">
 
         <TextView
             android:id="@+id/title_grammar"

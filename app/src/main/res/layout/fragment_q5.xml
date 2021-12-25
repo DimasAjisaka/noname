@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragments.FragmentQ1">
-        
+    tools:context=".fragments.FragmentQ5">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,39 +18,39 @@
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:id="@+id/c1"
+            android:id="@+id/c5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:text="@string/question_1"
+            android:text="@string/question_5"
             android:textColor="@color/darkenBlue"
             android:textSize="18sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/c1"
+            android:layout_below="@+id/c5"
             android:layout_marginTop="10dp"
             android:gravity="center">
 
             <RadioGroup
-                android:id="@+id/criteriaCompare1"
+                android:id="@+id/criteriaCompare5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/genreCheckQ1"
+                    android:id="@+id/genreCheckQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/genre_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/countryCheckQ1"
+                    android:id="@+id/countryCheckQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:button="@drawable/country_custom_radio_button"/>
+                    android:button="@drawable/ratting_custom_radio_button"/>
 
             </RadioGroup>
 
@@ -59,7 +59,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/integrityLayoutQ1"
+        android:id="@+id/integrityLayoutQ5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -81,75 +81,75 @@
             android:textSize="18sp" />
 
         <RelativeLayout
-            android:id="@+id/btnGroupLayoutQ1"
+            android:id="@+id/btnGroupLayoutQ5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/integrity"
             android:gravity="center">
 
             <RadioGroup
-                android:id="@+id/integrityQ1"
+                android:id="@+id/integrityQ5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/oneQ1"
+                    android:id="@+id/oneQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/one_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/twoQ1"
+                    android:id="@+id/twoQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/two_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/threeQ1"
+                    android:id="@+id/threeQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/three_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/fourQ1"
+                    android:id="@+id/fourQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/four_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/fiveQ1"
+                    android:id="@+id/fiveQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/five_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/sixQ1"
+                    android:id="@+id/sixQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/six_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/sevenQ1"
+                    android:id="@+id/sevenQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/seven_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/eightQ1"
+                    android:id="@+id/eightQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:button="@drawable/eight_integrity_custom_radio_button"/>
 
                 <RadioButton
-                    android:id="@+id/nineQ1"
+                    android:id="@+id/nineQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"

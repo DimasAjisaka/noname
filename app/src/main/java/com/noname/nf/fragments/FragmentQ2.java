@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 
 import com.noname.nf.R;
 
@@ -16,6 +19,12 @@ import com.noname.nf.R;
 // * create an instance of this fragment.
 // */
 public class FragmentQ2 extends Fragment {
+
+    RadioGroup radioGroupCriteriaCompare1,integrityRadio;
+    RadioButton radioButtonGenre,radioButtonCountry,inte1,inte2,inte3,inte4,inte5,inte6,inte7,inte8,inte9;
+    RelativeLayout integrityLayout;
+    String criteriaSelected;
+    float integrity;
 
 //    // TODO: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +70,57 @@ public class FragmentQ2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_q2, container, false);
+        View view = inflater.inflate(R.layout.fragment_q2, container, false);
+
+        radioGroupCriteriaCompare1 = view.findViewById(R.id.criteriaCompare2);
+        radioButtonGenre = view.findViewById(R.id.genreCheckQ2);
+        radioButtonCountry = view.findViewById(R.id.countryCheckQ2);
+        integrityLayout = view.findViewById(R.id.integrityLayoutQ2);
+        integrityRadio = view.findViewById(R.id.integrityQ2);
+        inte1 = view.findViewById(R.id.oneQ2);
+        inte2 = view.findViewById(R.id.twoQ2);
+        inte3 = view.findViewById(R.id.threeQ2);
+        inte4 = view.findViewById(R.id.fourQ2);
+        inte5 = view.findViewById(R.id.fiveQ2);
+        inte6 = view.findViewById(R.id.sixQ2);
+        inte7 = view.findViewById(R.id.sevenQ2);
+        inte8 = view.findViewById(R.id.eightQ2);
+        inte9 = view.findViewById(R.id.nineQ2);
+
+        radioGroupCriteriaCompare1.setOnCheckedChangeListener((group, checkedId) -> {
+            if (radioButtonGenre.isChecked()) {
+                integrityLayout.setVisibility(View.VISIBLE);
+                criteriaSelected = "genre";
+            }
+
+            if (radioButtonCountry.isChecked()) {
+                integrityLayout.setVisibility(View.VISIBLE);
+                criteriaSelected = "visual";
+            }
+        });
+
+        integrityRadio.setOnCheckedChangeListener(((group, checkedId) -> {
+            if(inte1.isChecked()){
+                integrity = 1.0f;
+            } else if(inte2.isChecked()){
+                integrity = 2.0f;
+            } else if(inte3.isChecked()){
+                integrity = 3.0f;
+            } else if(inte4.isChecked()){
+                integrity = 4.0f;
+            } else if(inte5.isChecked()){
+                integrity = 5.0f;
+            } else if(inte6.isChecked()){
+                integrity = 6.0f;
+            } else if(inte7.isChecked()){
+                integrity = 7.0f;
+            } else if(inte8.isChecked()){
+                integrity = 8.0f;
+            } else if(inte9.isChecked()){
+                integrity = 9.0f;
+            }
+        }));
+
+        return view;
     }
 }

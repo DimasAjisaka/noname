@@ -3,7 +3,7 @@ package com.noname.nf.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GenreEntriesResponse {
+public class RecommendedResponse {
 //    @SerializedName("results")
 //    @Expose()
 

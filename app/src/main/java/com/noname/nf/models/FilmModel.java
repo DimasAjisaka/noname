@@ -7,41 +7,44 @@ import android.os.Parcelable;
 public class FilmModel implements Parcelable {
     // here is variables for data that will parsing from json
     String title;
-    String thubnail;
+    String thumbnail;
     String releaseDate;
     String genre;
     float ratting;
     String country;
     String category;
-    float viewers;
+    float popularity;
     String synopsis;
+    int vote;
 
     // 1. make constructor
 
-    public FilmModel(String title, String thubnail, String releaseDate, String genre, float ratting, String country, String category, float viewers, String synopsis) {
+    public FilmModel(String title, String thumbnail, String releaseDate, String genre, float ratting, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
-        this.thubnail = thubnail;
+        this.thumbnail = thumbnail;
         this.releaseDate = releaseDate;
         this.genre = genre;
         this.ratting = ratting;
         this.country = country;
         this.category = category;
-        this.viewers = viewers;
+        this.popularity = popularity;
         this.synopsis = synopsis;
+        this.vote = vote;
     }
 
     // 2. make getter method
 
     protected FilmModel(Parcel in) {
         title = in.readString();
-        thubnail = in.readString();
+        thumbnail = in.readString();
         releaseDate = in.readString();
         genre = in.readString();
         ratting = in.readFloat();
         country = in.readString();
         category = in.readString();
-        viewers = in.readFloat();
+        popularity = in.readFloat();
         synopsis = in.readString();
+        vote = in.readInt();
     }
 
     public static final Creator<FilmModel> CREATOR = new Creator<FilmModel>() {
@@ -60,8 +63,8 @@ public class FilmModel implements Parcelable {
         return title;
     }
 
-    public String getThubnail() {
-        return thubnail;
+    public String getThumbnail() {
+        return thumbnail;
     }
 
     public String getReleaseDate() {
@@ -84,13 +87,15 @@ public class FilmModel implements Parcelable {
         return category;
     }
 
-    public float getViewers() {
-        return viewers;
+    public float getPopularity() {
+        return popularity;
     }
 
     public String getSynopsis() {
         return synopsis;
     }
+
+    public int getVote() {return vote; }
 
     @Override
     public int describeContents() {
@@ -100,28 +105,30 @@ public class FilmModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
-        dest.writeString(thubnail);
+        dest.writeString(thumbnail);
         dest.writeString(releaseDate);
         dest.writeString(genre);
         dest.writeFloat(ratting);
         dest.writeString(country);
         dest.writeString(category);
-        dest.writeFloat(viewers);
+        dest.writeFloat(popularity);
         dest.writeString(synopsis);
+        dest.writeInt(vote);
     }
 
     @Override
     public String toString() {
         return "FilmModel{" +
                 "title='" + title + '\'' +
-                ", thubnail='" + thubnail + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
                 ", genre='" + genre + '\'' +
                 ", ratting=" + ratting +
                 ", country='" + country + '\'' +
                 ", category='" + category + '\'' +
-                ", viewers=" + viewers +
+                ", viewers=" + popularity +
                 ", synopsis='" + synopsis + '\'' +
+                ", vote=" + vote +
                 '}';
     }
 }

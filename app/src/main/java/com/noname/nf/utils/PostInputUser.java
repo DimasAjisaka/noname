@@ -7,6 +7,6 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface PostInputUser {
-    @POST("ahp")
+    @POST("criteria")
     Call<PostInputUserModel> PostDataIntoAhpLogic(@Body PostInputUserModel postInputUserModel);
 }

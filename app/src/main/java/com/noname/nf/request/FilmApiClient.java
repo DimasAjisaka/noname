@@ -41,12 +41,12 @@ private MutableLiveData<List<FilmModel>> mutableLiveData;
     public LiveData<List<FilmModel>> getFilms() { return mutableLiveData; }
 
     // 4. create entry genre method to call through classes
-    public void recommendedFilm(String id) {
+    public void recommendedFilm() {
         if (retrieveFilmRunnable != null) {
             retrieveFilmRunnable = null;
         }
 
-        retrieveFilmRunnable = new RetrieveFilmRunnable(id);
+        retrieveFilmRunnable = new RetrieveFilmRunnable();
 
         final Future myHandler = AppExecutors.getInstance().networkIO().submit(retrieveFilmRunnable);
 
@@ -59,11 +59,9 @@ private MutableLiveData<List<FilmModel>> mutableLiveData;
     // 5. create retrieve class that will implementing runnable -> retrieving data from REST API by runnable
     private class RetrieveFilmRunnable implements Runnable {
 
-        private final String id;
         boolean cancelRequest;
 
-        public RetrieveFilmRunnable(String id) {
-            this.id = id;
+        public RetrieveFilmRunnable() {
             cancelRequest = false;
         }
 
@@ -72,7 +70,7 @@ private MutableLiveData<List<FilmModel>> mutableLiveData;
 
             // getting the response object
             try {
-                Response resultResponse = getResults(id).execute();
+                Response resultResponse = getResults().execute();
 
                 if (cancelRequest) {
                     return;
@@ -96,8 +94,8 @@ private MutableLiveData<List<FilmModel>> mutableLiveData;
         }
 
         // get results method
-        private Call<RecommendedResponse> getResults(String id) {
-            return Service.getFilmApi().recommendedFilm(id);
+        private Call<RecommendedResponse> getResults() {
+            return Service.getFilmApi().recommendedFilm();
         }
     }
 }

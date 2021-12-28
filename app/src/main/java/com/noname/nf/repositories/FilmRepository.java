@@ -25,5 +25,5 @@ public class FilmRepository {
     public LiveData<List<FilmModel>> getResults() { return filmApiClient.getFilms(); }
 
     // calling entry method in repo
-    public void recommendedFilm(String id) { filmApiClient.recommendedFilm(id); }
+    public void recommendedFilm() { filmApiClient.recommendedFilm(); }
 }

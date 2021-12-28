@@ -19,5 +19,5 @@ public class FilmListViewModel extends ViewModel {
     public LiveData<List<FilmModel>> getResults() { return filmRepository.getResults(); }
 
     // calling entry method in view model
-    public void recommendedFilm(String id) { filmRepository.recommendedFilm(id); }
+    public void recommendedFilm() { filmRepository.recommendedFilm(); }
 }

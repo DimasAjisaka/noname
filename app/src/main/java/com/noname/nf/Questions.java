@@ -2,11 +2,9 @@ package com.noname.nf;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -27,11 +25,19 @@ import com.noname.nf.fragments.FragmentQ7;
 import com.noname.nf.fragments.FragmentQ8;
 import com.noname.nf.fragments.FragmentQ9;
 import com.noname.nf.models.PostInputUserModel;
+import com.noname.nf.models.viewmodels.FilmListViewModel;
+import com.noname.nf.request.Service;
+import com.noname.nf.response.PostResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Questions extends AppCompatActivity {
 
     Button next,prev;
     int questions = 1;
+    FilmListViewModel filmListViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,19 +49,7 @@ public class Questions extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragments,new FragmentQ1()).commit();
 
-        next.setOnClickListener(n -> {
-            questions ++;
-            doingFragmentTransaction(questions);
-//            String q = String.valueOf(questions);
-//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
-        });
-
-        prev.setOnClickListener(p -> {
-            questions--;
-            doingFragmentTransaction(questions);
-//            String q = String.valueOf(questions);
-//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
-        });
+        filmListViewModel = new ViewModelProvider(this).get(FilmListViewModel.class);
 
         // initialize array
         String[] criteriaCompare = new String[15];
@@ -126,9 +120,23 @@ public class Questions extends AppCompatActivity {
         compareValue[12] = integrity13;
         compareValue[13] = integrity14;
         compareValue[14] = integrity15;
+
+        next.setOnClickListener(n -> {
+            questions ++;
+            doingFragmentTransaction(questions,criteriaCompare,compareValue);
+//            String q = String.valueOf(questions);
+//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
+        });
+
+        prev.setOnClickListener(p -> {
+            questions--;
+            doingFragmentTransaction(questions,criteriaCompare,compareValue);
+//            String q = String.valueOf(questions);
+//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
+        });
     }
 
-    void doingFragmentTransaction(int questions){
+    void doingFragmentTransaction(int questions, String[] criteriaCompare, float[] compareValue){
         // set prev button visibility
         if (questions > 1) {
             prev.setVisibility(View.VISIBLE);
@@ -204,12 +212,28 @@ public class Questions extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragments,selectFragments).commit();
         }
 
-//        if (questions > 16) {
-//            postData();
-//        }
+        if (questions > 2) {
+            postData("d",1);
+//            startActivity(new Intent(Questions.this,Results.class));
+        }
     }
 
-    void postData(String[] criteriaCompare, float[] compareValue) {
+    void postData(String criteriaCompare, float compareValue) {
         PostInputUserModel postInputUserModel = new PostInputUserModel(criteriaCompare,compareValue);
+
+        Call<PostResponse> call = Service.getFilmApi().PostDataIntoAhpLogic(postInputUserModel);
+
+        call.enqueue(new Callback<PostResponse>() {
+            @Override
+            public void onResponse(Call<PostResponse> call, Response<PostResponse> response) {
+                response.body().getPostInputUserModel();
+                Toast.makeText(getApplicationContext(),"success", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<PostResponse> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),"Error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

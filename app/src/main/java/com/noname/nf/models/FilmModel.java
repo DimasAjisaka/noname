@@ -10,7 +10,7 @@ public class FilmModel implements Parcelable {
     String title;
     String thumbnail;
     String releaseDate;
-    String genre;
+    Genre genres;
     float ratting;
     String country;
     String category;
@@ -18,12 +18,12 @@ public class FilmModel implements Parcelable {
     String synopsis;
     int vote;
 
-    // 1. make constructor
-    public FilmModel(String title, String thumbnail, String releaseDate, String genre, float ratting, String country, String category, float popularity, String synopsis, int vote) {
+    // constructor
+    public FilmModel(String title, String thumbnail, String releaseDate, Genre genres, float ratting, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.releaseDate = releaseDate;
-        this.genre = genre;
+        this.genres = genres;
         this.ratting = ratting;
         this.country = country;
         this.category = category;
@@ -32,18 +32,35 @@ public class FilmModel implements Parcelable {
         this.vote = vote;
     }
 
-    // 2. make getter method
+    // getter method
     protected FilmModel(Parcel in) {
         title = in.readString();
         thumbnail = in.readString();
         releaseDate = in.readString();
-        genre = in.readString();
         ratting = in.readFloat();
         country = in.readString();
         category = in.readString();
         popularity = in.readFloat();
         synopsis = in.readString();
         vote = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(thumbnail);
+        dest.writeString(releaseDate);
+        dest.writeFloat(ratting);
+        dest.writeString(country);
+        dest.writeString(category);
+        dest.writeFloat(popularity);
+        dest.writeString(synopsis);
+        dest.writeInt(vote);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<FilmModel> CREATOR = new Creator<FilmModel>() {
@@ -70,8 +87,8 @@ public class FilmModel implements Parcelable {
         return releaseDate;
     }
 
-    public String getGenre() {
-        return genre;
+    public Genre getGenres() {
+        return genres;
     }
 
     public float getRatting() {
@@ -94,26 +111,11 @@ public class FilmModel implements Parcelable {
         return synopsis;
     }
 
-    public int getVote() {return vote; }
-
-    @Override
-    public int describeContents() {
-        return 0;
+    public int getVote() {
+        return vote;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(title);
-        dest.writeString(thumbnail);
-        dest.writeString(releaseDate);
-        dest.writeString(genre);
-        dest.writeFloat(ratting);
-        dest.writeString(country);
-        dest.writeString(category);
-        dest.writeFloat(popularity);
-        dest.writeString(synopsis);
-        dest.writeInt(vote);
-    }
+    // to string method
 
     @Override
     public String toString() {
@@ -121,11 +123,11 @@ public class FilmModel implements Parcelable {
                 "title='" + title + '\'' +
                 ", thumbnail='" + thumbnail + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
-                ", genre='" + genre + '\'' +
+                ", genres=" + genres +
                 ", ratting=" + ratting +
                 ", country='" + country + '\'' +
                 ", category='" + category + '\'' +
-                ", viewers=" + popularity +
+                ", popularity=" + popularity +
                 ", synopsis='" + synopsis + '\'' +
                 ", vote=" + vote +
                 '}';

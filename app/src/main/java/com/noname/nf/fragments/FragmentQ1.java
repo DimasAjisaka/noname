@@ -1,5 +1,6 @@
 package com.noname.nf.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,7 +12,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
+import com.noname.nf.Questions;
 import com.noname.nf.R;
+
+import java.util.Objects;
 
 ///**
 // * A simple {@link Fragment} subclass.
@@ -23,8 +27,8 @@ public class FragmentQ1 extends Fragment {
     RadioGroup radioGroupCriteriaCompare1,integrityRadio;
     RadioButton radioButtonGenre,radioButtonCountry,inte1,inte2,inte3,inte4,inte5,inte6,inte7,inte8,inte9;
     RelativeLayout integrityLayout;
-    String criteriaSelected;
-    float integrity;
+    static String criteriaSelected;
+    static float integrity;
 
 //    // TODO: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -123,4 +127,7 @@ public class FragmentQ1 extends Fragment {
 
         return view;
     }
+
+    public static String getCriteriaQuestion1() { return criteriaSelected; }
+    public static float getIntegrityQuestion1() { return integrity; }
 }

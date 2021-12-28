@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ import com.noname.nf.fragments.FragmentQ6;
 import com.noname.nf.fragments.FragmentQ7;
 import com.noname.nf.fragments.FragmentQ8;
 import com.noname.nf.fragments.FragmentQ9;
+import com.noname.nf.models.PostInputUserModel;
 
 public class Questions extends AppCompatActivity {
 
@@ -53,6 +56,76 @@ public class Questions extends AppCompatActivity {
 //            String q = String.valueOf(questions);
 //            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
         });
+
+        // initialize array
+        String[] criteriaCompare = new String[15];
+        float[] compareValue = new float[15];
+
+        // array criteria
+        String criteria1 = FragmentQ1.getCriteriaQuestion1();
+        String criteria2 = FragmentQ2.getCriteriaQuestion2();
+        String criteria3 = FragmentQ3.getCriteriaQuestion3();
+        String criteria4 = FragmentQ4.getCriteriaQuestion4();
+        String criteria5 = FragmentQ5.getCriteriaQuestion5();
+        String criteria6 = FragmentQ6.getCriteriaQuestion6();
+        String criteria7 = FragmentQ7.getCriteriaQuestion7();
+        String criteria8 = FragmentQ8.getCriteriaQuestion8();
+        String criteria9 = FragmentQ9.getCriteriaQuestion9();
+        String criteria10 = FragmentQ10.getCriteriaQuestion10();
+        String criteria11 = FragmentQ11.getCriteriaQuestion11();
+        String criteria12 = FragmentQ12.getCriteriaQuestion12();
+        String criteria13 = FragmentQ13.getCriteriaQuestion13();
+        String criteria14 = FragmentQ14.getCriteriaQuestion14();
+        String criteria15 = FragmentQ15.getCriteriaQuestion15();
+
+        criteriaCompare[0] = criteria1;
+        criteriaCompare[1] = criteria2;
+        criteriaCompare[2] = criteria3;
+        criteriaCompare[3] = criteria4;
+        criteriaCompare[4] = criteria5;
+        criteriaCompare[5] = criteria6;
+        criteriaCompare[6] = criteria7;
+        criteriaCompare[7] = criteria8;
+        criteriaCompare[8] = criteria9;
+        criteriaCompare[9] = criteria10;
+        criteriaCompare[10] = criteria11;
+        criteriaCompare[11] = criteria12;
+        criteriaCompare[12] = criteria13;
+        criteriaCompare[13] = criteria14;
+        criteriaCompare[14] = criteria15;
+
+        // array compare value
+        float integrity1 = FragmentQ1.getIntegrityQuestion1();
+        float integrity2 = FragmentQ2.getIntegrityQuestion2();
+        float integrity3 = FragmentQ3.getIntegrityQuestion3();
+        float integrity4 = FragmentQ4.getIntegrityQuestion4();
+        float integrity5 = FragmentQ5.getIntegrityQuestion5();
+        float integrity6 = FragmentQ6.getIntegrityQuestion6();
+        float integrity7 = FragmentQ7.getIntegrityQuestion7();
+        float integrity8 = FragmentQ8.getIntegrityQuestion8();
+        float integrity9 = FragmentQ9.getIntegrityQuestion9();
+        float integrity10 = FragmentQ10.getIntegrityQuestion10();
+        float integrity11 = FragmentQ11.getIntegrityQuestion11();
+        float integrity12 = FragmentQ12.getIntegrityQuestion12();
+        float integrity13 = FragmentQ13.getIntegrityQuestion13();
+        float integrity14 = FragmentQ14.getIntegrityQuestion14();
+        float integrity15 = FragmentQ15.getIntegrityQuestion15();
+
+        compareValue[0] = integrity1;
+        compareValue[1] = integrity2;
+        compareValue[2] = integrity3;
+        compareValue[3] = integrity4;
+        compareValue[4] = integrity5;
+        compareValue[5] = integrity6;
+        compareValue[6] = integrity7;
+        compareValue[7] = integrity8;
+        compareValue[8] = integrity9;
+        compareValue[9] = integrity10;
+        compareValue[10] = integrity11;
+        compareValue[11] = integrity12;
+        compareValue[12] = integrity13;
+        compareValue[13] = integrity14;
+        compareValue[14] = integrity15;
     }
 
     void doingFragmentTransaction(int questions){
@@ -130,5 +203,13 @@ public class Questions extends AppCompatActivity {
             assert selectFragments != null;
             getSupportFragmentManager().beginTransaction().replace(R.id.fragments,selectFragments).commit();
         }
+
+//        if (questions > 16) {
+//            postData();
+//        }
+    }
+
+    void postData(String[] criteriaCompare, float[] compareValue) {
+        PostInputUserModel postInputUserModel = new PostInputUserModel(criteriaCompare,compareValue);
     }
 }

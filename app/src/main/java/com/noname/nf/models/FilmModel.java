@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 // this class will implementing parcelable
 public class FilmModel implements Parcelable {
+
     // here is variables for data that will parsing from json
     String title;
     String thumbnail;
@@ -18,7 +19,6 @@ public class FilmModel implements Parcelable {
     int vote;
 
     // 1. make constructor
-
     public FilmModel(String title, String thumbnail, String releaseDate, String genre, float ratting, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
         this.thumbnail = thumbnail;
@@ -33,7 +33,6 @@ public class FilmModel implements Parcelable {
     }
 
     // 2. make getter method
-
     protected FilmModel(Parcel in) {
         title = in.readString();
         thumbnail = in.readString();

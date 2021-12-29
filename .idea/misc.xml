@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/button_shape.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/card_layout.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/category_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/country_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/eight_integrity_custom_radio_button.xml" value="0.3546875" />
@@ -20,10 +22,13 @@
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/less_color_shape.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/nine_integrity_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/one_integrity_custom_radio_button.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/popularity_custom_radio_button.xml" value="0.3546875" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/ratting_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/seven_integrity_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/six_integrity_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/three_integrity_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/two_integrity_custom_radio_button.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/vote_custom_radio_button.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/white_shape.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_login.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_login_deleted.xml" value="0.18645833333333334" />
@@ -33,7 +38,21 @@
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_results.xml" value="0.33" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_splash_screen.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q1.xml" value="0.33" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q10.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q11.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q12.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q13.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q14.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q15.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q2.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q3.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q4.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q5.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q6.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q7.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q8.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q9.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/result_film_view_model.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/slider_layout.xml" value="0.3385416666666667" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/drawable/age_custom_radio_button.xml" value="0.37864583333333335" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/drawable/input_field_bg.xml" value="0.37864583333333335" />

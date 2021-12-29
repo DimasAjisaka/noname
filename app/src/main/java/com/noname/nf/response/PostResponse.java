@@ -1,12 +1,19 @@
 package com.noname.nf.response;
 
-import com.noname.nf.models.PostInputUserModel;
+import com.noname.nf.models.PostInputModel;
+
+import java.util.ArrayList;
 
 public class PostResponse {
+//    ArrayList<String> stringCompare;
+//
+//    public ArrayList<String> getStringCompare() {
+//        return stringCompare;
+//    }
 
-    PostInputUserModel postInputUserModel;
+    PostInputModel postInputModel;
 
-    public PostInputUserModel getPostInputUserModel() {
-        return postInputUserModel;
+    public PostInputModel getPostInputModel() {
+        return postInputModel;
     }
 }

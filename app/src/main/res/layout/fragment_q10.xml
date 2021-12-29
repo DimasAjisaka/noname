@@ -43,14 +43,14 @@
                     android:id="@+id/genreCheckQ10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/visual_custom_radio_button"/>
+                    android:button="@drawable/popularity_custom_radio_button"/>
 
                 <RadioButton
                     android:id="@+id/countryCheckQ10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:button="@drawable/age_custom_radio_button"/>
+                    android:button="@drawable/popularity_custom_radio_button"/>
 
             </RadioGroup>
 

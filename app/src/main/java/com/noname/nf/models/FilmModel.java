@@ -11,7 +11,7 @@ public class FilmModel implements Parcelable {
     String thumbnail;
     String releaseDate;
     Genre genres;
-    float ratting;
+    float rating;
     String country;
     String category;
     float popularity;
@@ -19,12 +19,12 @@ public class FilmModel implements Parcelable {
     int vote;
 
     // constructor
-    public FilmModel(String title, String thumbnail, String releaseDate, Genre genres, float ratting, String country, String category, float popularity, String synopsis, int vote) {
+    public FilmModel(String title, String thumbnail, String releaseDate, Genre genres, float rating, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.releaseDate = releaseDate;
         this.genres = genres;
-        this.ratting = ratting;
+        this.rating = rating;
         this.country = country;
         this.category = category;
         this.popularity = popularity;
@@ -37,7 +37,7 @@ public class FilmModel implements Parcelable {
         title = in.readString();
         thumbnail = in.readString();
         releaseDate = in.readString();
-        ratting = in.readFloat();
+        rating = in.readFloat();
         country = in.readString();
         category = in.readString();
         popularity = in.readFloat();
@@ -50,7 +50,7 @@ public class FilmModel implements Parcelable {
         dest.writeString(title);
         dest.writeString(thumbnail);
         dest.writeString(releaseDate);
-        dest.writeFloat(ratting);
+        dest.writeFloat(rating);
         dest.writeString(country);
         dest.writeString(category);
         dest.writeFloat(popularity);
@@ -91,8 +91,8 @@ public class FilmModel implements Parcelable {
         return genres;
     }
 
-    public float getRatting() {
-        return ratting;
+    public float getRating() {
+        return rating;
     }
 
     public String getCountry() {
@@ -124,7 +124,7 @@ public class FilmModel implements Parcelable {
                 ", thumbnail='" + thumbnail + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
                 ", genres=" + genres +
-                ", ratting=" + ratting +
+                ", rating=" + rating +
                 ", country='" + country + '\'' +
                 ", category='" + category + '\'' +
                 ", popularity=" + popularity +

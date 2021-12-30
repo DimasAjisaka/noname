@@ -3,6 +3,8 @@ package com.noname.nf.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 // this class will implementing parcelable
 public class FilmModel implements Parcelable {
 
@@ -10,7 +12,7 @@ public class FilmModel implements Parcelable {
     String title;
     String thumbnail;
     String releaseDate;
-    Genre genres;
+    List<Genre> genres;
     float rating;
     String country;
     String category;
@@ -19,7 +21,7 @@ public class FilmModel implements Parcelable {
     int vote;
 
     // constructor
-    public FilmModel(String title, String thumbnail, String releaseDate, Genre genres, float rating, String country, String category, float popularity, String synopsis, int vote) {
+    public FilmModel(String title, String thumbnail, String releaseDate, List<Genre> genres, float rating, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.releaseDate = releaseDate;
@@ -87,7 +89,7 @@ public class FilmModel implements Parcelable {
         return releaseDate;
     }
 
-    public Genre getGenres() {
+    public List<Genre> getGenres() {
         return genres;
     }
 

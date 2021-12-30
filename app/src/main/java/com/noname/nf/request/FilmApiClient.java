@@ -27,16 +27,16 @@ public class FilmApiClient {
     // 1. make live data list movie model
     private MutableLiveData<List<FilmModel>> mutableLiveData;
 
-    // tmdb
-    private MutableLiveData<List<MovieModel>> mutableLiveDataTmdb;
+        // tmdb
+        private MutableLiveData<List<MovieModel>> mutableLiveDataTmdb;
 
     private static FilmApiClient instance;
 
     // making global runnable here
     private RetrieveFilmRunnable retrieveFilmRunnable;
 
-    // tmdb
-    private RetrieveFilmRunnableTmdb retrieveFilmRunnableTmdb;
+        // tmdb
+        private RetrieveFilmRunnableTmdb retrieveFilmRunnableTmdb;
 
     public static FilmApiClient getInstance(){
         if (instance == null) {
@@ -45,13 +45,16 @@ public class FilmApiClient {
     }
 
     // 2. create film api client live data
-    private FilmApiClient() { mutableLiveData = new MutableLiveData<>(); mutableLiveDataTmdb = new MutableLiveData<>(); }
+    private FilmApiClient() {
+        mutableLiveData = new MutableLiveData<>();
+        mutableLiveDataTmdb = new MutableLiveData<>();
+    }
 
     // 3. create get film method that will returning live data
     public LiveData<List<FilmModel>> getFilms() { return mutableLiveData; }
 
-    // tmdb
-    public LiveData<List<MovieModel>> getMovie() { return mutableLiveDataTmdb; }
+        // tmdb
+        public LiveData<List<MovieModel>> getMovie() { return mutableLiveDataTmdb; }
 
     // 4. create entry genre method to call through classes
     public void recommendedFilm() {
@@ -69,21 +72,21 @@ public class FilmApiClient {
         },3000, TimeUnit.MILLISECONDS);
     }
 
-    // tmdb
-    public void searchMovie(String query,int page) {
-        if (retrieveFilmRunnable != null) {
-            retrieveFilmRunnable = null;
+        // tmdb
+        public void searchMovie(String query,int page) {
+            if (retrieveFilmRunnable != null) {
+                retrieveFilmRunnable = null;
+            }
+
+            retrieveFilmRunnableTmdb = new RetrieveFilmRunnableTmdb(query,page);
+
+            final Future myHandler = AppExecutors.getInstance().networkIO().submit(retrieveFilmRunnableTmdb);
+
+            AppExecutors.getInstance().networkIO().schedule(() -> {
+                // cancelling the retrofit call
+                myHandler.cancel(true);
+            },3000, TimeUnit.MILLISECONDS);
         }
-
-        retrieveFilmRunnableTmdb = new RetrieveFilmRunnableTmdb(query,page);
-
-        final Future myHandler = AppExecutors.getInstance().networkIO().submit(retrieveFilmRunnableTmdb);
-
-        AppExecutors.getInstance().networkIO().schedule(() -> {
-            // cancelling the retrofit call
-            myHandler.cancel(true);
-        },3000, TimeUnit.MILLISECONDS);
-    }
 
     // 5. create retrieve class that will implementing runnable -> retrieving data from REST API by runnable
     private class RetrieveFilmRunnable implements Runnable {
@@ -128,46 +131,46 @@ public class FilmApiClient {
         }
     }
 
-    // retrieve runnable for tmdb
-    private class RetrieveFilmRunnableTmdb implements Runnable {
+        // retrieve runnable for tmdb
+        private class RetrieveFilmRunnableTmdb implements Runnable {
 
-        String query;
-        boolean cancelRequest;
-        int page;
+            String query;
+            boolean cancelRequest;
+            int page;
 
-        public RetrieveFilmRunnableTmdb(String query, int page) {
-            this.query = query;
-            this.page = page;
-            cancelRequest = false;
-        }
+            public RetrieveFilmRunnableTmdb(String query, int page) {
+                this.query = query;
+                this.page = page;
+                cancelRequest = false;
+            }
 
-        @Override
-        public void run() {
+            @Override
+            public void run() {
 
-            // getting the response object
-            try {
-                Response response = getMovie(query,page).execute();
+                // getting the response object
+                try {
+                    Response response = getMovie(query,page).execute();
 
-                if (cancelRequest) {
-                    return;
-                }
+                    if (cancelRequest) {
+                        return;
+                    }
 
-                if (response.code() == 200) {
-                    assert response.body() != null;
-                    List<MovieModel> listTmdb = new ArrayList<>(((TmdbResponse)response.body()).getMovies());
-                    mutableLiveDataTmdb.postValue(listTmdb);
-                } else {
-                    assert response.errorBody() != null;
-                    String error = response.errorBody().string();
-                    Log.v("tag","Error"+error);
+                    if (response.code() == 200) {
+                        assert response.body() != null;
+                        List<MovieModel> listTmdb = new ArrayList<>(((TmdbResponse)response.body()).getMovies());
+                        mutableLiveDataTmdb.postValue(listTmdb);
+                    } else {
+                        assert response.errorBody() != null;
+                        String error = response.errorBody().string();
+                        Log.v("tag","Error"+error);
+                        mutableLiveDataTmdb.postValue(null);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                     mutableLiveDataTmdb.postValue(null);
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-                mutableLiveDataTmdb.postValue(null);
             }
-        }
 
-        private Call<TmdbResponse> getMovie(String query,int page) { return Service.getFilmApi().searchMovie(Credentials.API_KEY,query,page); }
-    }
+            private Call<TmdbResponse> getMovie(String query,int page) { return Service.getFilmApi().searchMovie(Credentials.API_KEY,query,page); }
+        }
 }

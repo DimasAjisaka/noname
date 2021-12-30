@@ -89,12 +89,12 @@ public class FragmentQ13 extends Fragment {
         radioGroupCriteriaCompare1.setOnCheckedChangeListener((group, checkedId) -> {
             if (radioButtonGenre.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "age";
+                criteriaSelected = "category";
             }
 
             if (radioButtonCountry.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "viewers";
+                criteriaSelected = "vote";
             }
         });
 

@@ -95,7 +95,7 @@ public class FragmentQ4 extends Fragment {
 
             if (radioButtonCountry.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "viewers";
+                criteriaSelected = "vote";
             }
         });
 

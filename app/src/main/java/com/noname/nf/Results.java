@@ -32,8 +32,8 @@ public class Results extends AppCompatActivity implements OnFilmListener {
         filmListViewModel = new ViewModelProvider(this).get(FilmListViewModel.class);
 
         ObservingAnyChanges();
-        ConfigureRecycleView();
         recommendedFilm();
+        ConfigureRecycleView();
 //        AdapterStatic adapterStatic = new AdapterStatic(this,title,genres,rating,posterPath);
 //        recyclerView.setAdapter(adapterStatic);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));

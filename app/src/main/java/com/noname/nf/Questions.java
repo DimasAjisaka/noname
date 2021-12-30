@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -58,15 +57,11 @@ public class Questions extends AppCompatActivity {
         next.setOnClickListener(n -> {
             questions ++;
             doingFragmentTransaction(questions);
-//            String q = String.valueOf(questions);
-//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
         });
 
         prev.setOnClickListener(p -> {
             questions--;
             doingFragmentTransaction(questions);
-//            String q = String.valueOf(questions);
-//            Toast.makeText(Questions.this,q,Toast.LENGTH_SHORT).show();
         });
     }
 

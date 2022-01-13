@@ -49,7 +49,7 @@ public class SplashScreen extends AppCompatActivity {
 //            if(auth.getCurrentUser() != null){
 //                toMainApp();
 //            } else {
-                startActivity(new Intent(SplashScreen.this,Results.class));
+                startActivity(new Intent(SplashScreen.this,MainPage.class));
                 finish();
 //            }
             }

@@ -23,8 +23,8 @@ public class FragmentQ5 extends Fragment {
     RadioGroup radioGroupCriteriaCompare1,integrityRadio;
     RadioButton radioButtonGenre,radioButtonCountry,inte1,inte2,inte3,inte4,inte5,inte6,inte7,inte8,inte9;
     RelativeLayout integrityLayout;
-    String criteriaSelected;
-    float integrity;
+    static String criteriaSelected;
+    static float integrity;
 
 //    // TODO: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -95,7 +95,7 @@ public class FragmentQ5 extends Fragment {
 
             if (radioButtonCountry.isChecked()) {
                 integrityLayout.setVisibility(View.VISIBLE);
-                criteriaSelected = "ratting";
+                criteriaSelected = "rating";
             }
         });
 
@@ -123,4 +123,7 @@ public class FragmentQ5 extends Fragment {
 
         return view;
     }
+
+    public static String getCriteriaQuestion5() { return criteriaSelected; }
+    public static float getIntegrityQuestion5() { return integrity; }
 }

@@ -3,45 +3,66 @@ package com.noname.nf.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 // this class will implementing parcelable
 public class FilmModel implements Parcelable {
+
     // here is variables for data that will parsing from json
     String title;
-    String thubnail;
+    String thumbnail;
     String releaseDate;
-    String genre;
-    float ratting;
+    List<Genre> genres;
+    float rating;
     String country;
     String category;
-    float viewers;
+    float popularity;
     String synopsis;
+    int vote;
 
-    // 1. make constructor
-
-    public FilmModel(String title, String thubnail, String releaseDate, String genre, float ratting, String country, String category, float viewers, String synopsis) {
+    // constructor
+    public FilmModel(String title, String thumbnail, String releaseDate, List<Genre> genres, float rating, String country, String category, float popularity, String synopsis, int vote) {
         this.title = title;
-        this.thubnail = thubnail;
+        this.thumbnail = thumbnail;
         this.releaseDate = releaseDate;
-        this.genre = genre;
-        this.ratting = ratting;
+        this.genres = genres;
+        this.rating = rating;
         this.country = country;
         this.category = category;
-        this.viewers = viewers;
+        this.popularity = popularity;
         this.synopsis = synopsis;
+        this.vote = vote;
     }
 
-    // 2. make getter method
-
+    // getter method
     protected FilmModel(Parcel in) {
         title = in.readString();
-        thubnail = in.readString();
+        thumbnail = in.readString();
         releaseDate = in.readString();
-        genre = in.readString();
-        ratting = in.readFloat();
+        rating = in.readFloat();
         country = in.readString();
         category = in.readString();
-        viewers = in.readFloat();
+        popularity = in.readFloat();
         synopsis = in.readString();
+        vote = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(thumbnail);
+        dest.writeString(releaseDate);
+        dest.writeFloat(rating);
+        dest.writeString(country);
+        dest.writeString(category);
+        dest.writeFloat(popularity);
+        dest.writeString(synopsis);
+        dest.writeInt(vote);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<FilmModel> CREATOR = new Creator<FilmModel>() {
@@ -60,20 +81,20 @@ public class FilmModel implements Parcelable {
         return title;
     }
 
-    public String getThubnail() {
-        return thubnail;
+    public String getThumbnail() {
+        return thumbnail;
     }
 
     public String getReleaseDate() {
         return releaseDate;
     }
 
-    public String getGenre() {
-        return genre;
+    public List<Genre> getGenres() {
+        return genres;
     }
 
-    public float getRatting() {
-        return ratting;
+    public float getRating() {
+        return rating;
     }
 
     public String getCountry() {
@@ -84,44 +105,33 @@ public class FilmModel implements Parcelable {
         return category;
     }
 
-    public float getViewers() {
-        return viewers;
+    public float getPopularity() {
+        return popularity;
     }
 
     public String getSynopsis() {
         return synopsis;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public int getVote() {
+        return vote;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(title);
-        dest.writeString(thubnail);
-        dest.writeString(releaseDate);
-        dest.writeString(genre);
-        dest.writeFloat(ratting);
-        dest.writeString(country);
-        dest.writeString(category);
-        dest.writeFloat(viewers);
-        dest.writeString(synopsis);
-    }
+    // to string method
 
     @Override
     public String toString() {
         return "FilmModel{" +
                 "title='" + title + '\'' +
-                ", thubnail='" + thubnail + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
-                ", genre='" + genre + '\'' +
-                ", ratting=" + ratting +
+                ", genres=" + genres +
+                ", rating=" + rating +
                 ", country='" + country + '\'' +
                 ", category='" + category + '\'' +
-                ", viewers=" + viewers +
+                ", popularity=" + popularity +
                 ", synopsis='" + synopsis + '\'' +
+                ", vote=" + vote +
                 '}';
     }
 }

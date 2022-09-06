@@ -43,7 +43,7 @@
                     android:id="@+id/genreCheckQ14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/age_custom_radio_button"/>
+                    android:button="@drawable/category_custom_radio_button"/>
 
                 <RadioButton
                     android:id="@+id/countryCheckQ14"

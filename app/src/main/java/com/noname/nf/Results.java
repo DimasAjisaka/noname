@@ -55,7 +55,7 @@ public class Results extends AppCompatActivity implements OnFilmListener {
     private void ObservingAnyChanges() {
         filmListViewModel.getResults().observe(this, filmModels -> {
             if(filmModels != null) {
-                for (FilmModel filmModel: filmModels) {
+                for (FilmModel ignored : filmModels) {
                     filmRecycleViewAdapter.setmFilms(filmModels);
                 }
             }

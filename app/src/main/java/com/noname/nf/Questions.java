@@ -55,8 +55,12 @@ public class Questions extends AppCompatActivity {
         filmListViewModel = new ViewModelProvider(this).get(FilmListViewModel.class);
 
         next.setOnClickListener(n -> {
-            questions ++;
-            doingFragmentTransaction(questions);
+            try {
+                questions++;
+                doingFragmentTransaction(questions);
+            } catch (Exception e) {
+                Toast.makeText(this,"Pastikan server berjalan dengan baik",Toast.LENGTH_LONG).show();
+            }
         });
 
         prev.setOnClickListener(p -> {

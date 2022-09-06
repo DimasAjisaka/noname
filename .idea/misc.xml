@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ansori San/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/age_custom_radio_button.xml" value="0.1565" />
+        <entry key="..\:/Users/Ansori San/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/button_shape.xml" value="0.1565" />
+        <entry key="..\:/Users/Ansori San/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_main_page.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Ansori San/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/activity_questions.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/Ansori San/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/layout/fragment_q1.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/button_shape.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/card_layout.xml" value="0.3546875" />
         <entry key="..\:/Users/Shou/Downloads/Documents/Perkuliahan RPL/Semester 3/Logika Informatika/tubes/noname/noname/app/src/main/res/drawable/category_custom_radio_button.xml" value="0.3546875" />
@@ -81,11 +86,13 @@
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/layout/fragment_q8.xml" value="0.3625" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/layout/fragment_q9.xml" value="0.3625" />
         <entry key="..\:/noname_project/nf/noname/app/src/main/res/layout/slider_layout.xml" value="0.3625" />
+        <entry key="app/src/main/res/layout/fragment_q10.xml" value="0.2617753623188406" />
+        <entry key="app/src/main/res/layout/fragment_q12.xml" value="0.2617753623188406" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
